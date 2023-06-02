@@ -7,7 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Server" />
-        <module name="API" />
+        <module name="Rigster" />
+        <module name="Common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,7 +17,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="API" options="-parameters" />
+      <module name="API" options="" />
+      <module name="Common" options="-parameters" />
+      <module name="Rigster" options="-parameters" />
       <module name="Server" options="-parameters" />
     </option>
   </component>
