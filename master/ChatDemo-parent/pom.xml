@@ -12,6 +12,7 @@
         <module>API</module>
         <module>Server</module>
         <module>Common</module>
+        <module>Server/Register-server</module>
     </modules>
 
     <parent>
