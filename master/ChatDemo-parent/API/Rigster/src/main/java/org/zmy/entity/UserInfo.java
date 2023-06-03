@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInfo extends CommonField{
-    private Long account;//账户
+    private String account;//账户
     private String password;//密码
     private String nickname;//昵称
     private Integer sex;//性别：为1时表示男性，为0时表示女性

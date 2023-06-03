@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Server" />
         <module name="Rigster" />
+        <module name="Register-server" />
         <module name="Common" />
       </profile>
     </annotationProcessing>
@@ -19,8 +19,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="API" options="" />
       <module name="Common" options="-parameters" />
+      <module name="Register-server" options="-parameters" />
       <module name="Rigster" options="-parameters" />
-      <module name="Server" options="-parameters" />
+      <module name="Server" options="" />
     </option>
   </component>
 </project>
