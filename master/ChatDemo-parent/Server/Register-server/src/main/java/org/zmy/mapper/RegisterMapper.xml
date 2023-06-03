@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="RegisterMapper">
+    <resultMap id="UerInfoMap" type="org.zmy.entity.UserInfo">
+        <id column="id" property="id"></id>
+        <result column="account" property="account"></result>
+        <result column="password" property="password"></result>
+        <result column="nickname" property="nickname"></result>
+        <result column="sex" property="sex"></result>
+        <result column="age" property="age"></result>
+        <result column="create_user" property="createUser"></result>
+        <result column="create_time" property="createTime"></result>
+        <result column="modify_user" property="modifyUser"></result>
+        <result column="modify_time" property="modifyTime"></result>
+    </resultMap>
+
+    <select id="selectByAccount" resultType="java.lang.String">
+        select account from userinfo where account = #{account}
+    </select>
+
+    <insert id="insertAccount" useGeneratedKeys="true" keyProperty="id" parameterType="org.zmy.entity.UserInfo">
+        insert into userinfo(account,password,nickname,sex,age,create_user,create_time,modify_user,modify_time)
+        values (
+            #{account},#{password},#{nickname},#{sex},#{age},
+            #{createUser},#{createTime},#{modifyUser},#{modifyTime}
+               )
+    </insert>
+</mapper>
