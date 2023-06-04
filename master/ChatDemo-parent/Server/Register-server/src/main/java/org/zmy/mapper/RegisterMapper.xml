@@ -5,6 +5,7 @@
         <id column="id" property="id"></id>
         <result column="account" property="account"></result>
         <result column="password" property="password"></result>
+        <result column="salt" property="salt"></result>
         <result column="nickname" property="nickname"></result>
         <result column="sex" property="sex"></result>
         <result column="age" property="age"></result>
@@ -19,9 +20,9 @@
     </select>
 
     <insert id="insertAccount" useGeneratedKeys="true" keyProperty="id" parameterType="org.zmy.entity.UserInfo">
-        insert into userinfo(account,password,nickname,sex,age,create_user,create_time,modify_user,modify_time)
+        insert into userinfo(account,password,salt,nickname,sex,age,create_user,create_time,modify_user,modify_time)
         values (
-            #{account},#{password},#{nickname},#{sex},#{age},
+            #{account},#{password},#{salt},#{nickname},#{sex},#{age},
             #{createUser},#{createTime},#{modifyUser},#{modifyTime}
                )
     </insert>
